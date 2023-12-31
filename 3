@@ -1914,6 +1914,7 @@ for i,v in pairs(require(game.ReplicatedStorage.ClientModules.Core.ClientData).g
     end
 end
 local randomABCPet = RoT(Pets)
+RS.API:FindFirstChild("ToolAPI/Equip"):InvokeServer(randomABCPet)
 
 
 function EquipPet()
