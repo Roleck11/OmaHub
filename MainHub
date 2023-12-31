@@ -894,11 +894,6 @@ else
     Text = "Bucks Earned: 0 "
 end
 
-local abcID = get_thread_identity()
-set_thread_identity(10)
-Bucks_Earned:Set(Text)
-set_thread_identity(abcID)
-
 local SleepyReward,HungryReward,ThirstyReward,DirtyReward,SchoolReward,CampingReward,SickReward,SalonReward,PizzaPartyReward,BoredReward,
 SleepyReward = AilmentDa.sleepy.reward 
 HungryReward = AilmentDa.hungry.reward 
@@ -990,6 +985,7 @@ Skin_Tones = {2648679719, 2648695837, 2648697082, 2648697794, 2648698393, 264870
 
 local k = get_thread_identity()
 set_thread_identity(4)
+Bucks_Earned:Set(Text)
 local Labels = {Bucks_Earned, Pet_Status, Status}
 for i, v in pairs(Labels) do
     local Old = v.Set 
