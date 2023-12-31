@@ -893,7 +893,12 @@ if AltCurrencyEnabled then
 else 
     Text = "Bucks Earned: 0 "
 end
+
+local abcID = get_thread_identity()
+set_thread_identity(10)
 Bucks_Earned:Set(Text)
+set_thread_identity(abcID)
+
 local SleepyReward,HungryReward,ThirstyReward,DirtyReward,SchoolReward,CampingReward,SickReward,SalonReward,PizzaPartyReward,BoredReward,
 SleepyReward = AilmentDa.sleepy.reward 
 HungryReward = AilmentDa.hungry.reward 
