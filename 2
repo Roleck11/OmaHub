@@ -1909,7 +1909,7 @@ end
 
 Pets = {}
 for i,v in pairs(require(game.ReplicatedStorage.ClientModules.Core.ClientData).get_data()[game.Players.LocalPlayer.Name].inventory.pets) do
-    if string.find(v.id, "pigeon") and v.properties.age == 6 then   
+    if v.properties.age == 6 then   
         table.insert(Pets, i)
     end
 end
