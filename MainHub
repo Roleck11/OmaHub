@@ -5948,19 +5948,6 @@ AutoHealOther = LP:AddToggle({Name="Auto Heal Others",Default=false,Callback=fun
     end
 end})
 
-UnHide = LP:AddToggle({Name="Hide/Unhide Players (Client)",Default=false,Callback=function(t)
-    Settings.Unhide = t 
-    UpdateFile()
-    if Settings.Unhide and MainSettings.ApplySettings and MainSettings.ApplyID == tostring(game.Players.LocalPlayer.UserId) then 
-        game.TextChatService.TextChannels.RBXGeneral:SendAsync("Unhide Enabled")
-    end
-    if Settings.Unhide then 
-        require(game:GetService("ReplicatedStorage").ClientModules.CharacterHider).hide_other_characters_in_location(TeleportModule.get_current_location().destination_id)
-    else 
-        require(game:GetService("ReplicatedStorage").ClientModules.CharacterHider).unhide_other_characters_in_location(TeleportModule.get_current_location().destination_id)
-    end
-end})
-
 AutoClosePrompts = LP:AddToggle({Name="Auto Close Prompts",Default=false,Callback=function(t)
     AutoClosePromptsBool = t 
     if AutoClosePromptsBool == true then 
